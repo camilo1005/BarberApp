@@ -1,0 +1,65 @@
+{% extends "maestra.html" %}
+{% block titulo %}
+Agregar corte
+{% endblock %}
+{% block contenido %}
+
+
+<section class="section">
+    <div class="columna">
+        <div class="columna2">
+            <h3 class="titulo1">💈 Agregar Corte</h3>
+            <br>
+            <br>
+            <form action="{{url_for('guardar_corte')}}" method="POST">
+                <div class="aggCorte">
+                    
+                    <div class="Ncorte1"></div>
+                    <label for="nombredelcorte">Nombre corte</label>
+                    <input required type="text" class="input" placeholder="Nombre del corte" name="nombrecorte" id="nombrecorte"><br>
+                    <br></div>
+                    <div class="Tsombra1">
+                    <label for="tiposombra">Tipo sombra</label>
+                    <input required type="text" class="input" placeholder="Tipo de sombra" name="tiposombra" id="tiposombra"><br>
+                    <br></div>
+                    <div class="free1">
+                    <label for="freestyles">Freestyles</label>
+                    <input required type="text" class="input" placeholder="si/no" name="freestyles" id="freestyles"><br>
+                    <br></div>
+                    <div class="cejas1">
+                    <label for="cejas">Cejas</label>
+                    <input required type="text" class="input" placeholder="si/no" name="cejas" id="cejas"><br>
+                    <br></div>
+                    <div class="barba1">
+                    <label for="barba">Barba</label>
+                    <input required type="text" class="input" placeholder="si/no" name="barba" id="barba"><br>
+                    <br></div>
+                    <div class="marcado1">
+                    <label for="marcado">Marcado</label>
+                    <input required type="text" class="input" placeholder="si/no" name="marcado" id="marcado"><br>
+                    <br></div>
+                    <div class="patilla1">
+                    <label for="patilla">Patilla</label>
+                    <input required type="text" class="input" placeholder="si/no" name="patilla" id="patilla"><br>
+                    <br></div>
+                    <div class="patilla1">
+                        <label for="diacita"> Día</label>
+                        <input required type="date" class="input"name="diacita" id="diacita"><br>
+                    <br></div>
+                    <div class="patilla1">
+                        <label for="horacitas"> Hora</label>
+                        <input required type="time" class="input"name="horacita" id="horacita"><br>
+                    <br></div>
+                    <button type="submit"  class="button"  >Guardar</button>
+                    <a href="{{url_for('cortes')}}">
+                        <button  class="button" style="text-decoration: none;">Volver</button>
+                    </a>
+                </div>    
+            </form>
+            
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

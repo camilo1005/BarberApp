@@ -1,0 +1,45 @@
+{% extends "maestra.html" %}
+{% block titulo %}
+Editar Administrador
+{% endblock %}
+{% block contenido %}
+<section class="section">
+    <div class="coluna">
+        <div class="columna1">
+            <h3 class="titulo"> Editar Administrador</h3>
+            <form action="{{url_for('actualizar_administrador')}}" method="POST">
+                
+                <input type="hidden" name="codigoadministrador" value="{{administrador[0]}}">
+                <div class="Ncorte">
+                <label for="nombre">Nombre</label>
+                <input value="{{administrador[1]}}" required type="text" class="input" placeholder="Nombre" name="nombre" id="nombre"><br>
+                <br></div>
+                <div class="Apellido">
+                <label for="apellido">Apellido</label>
+                <input value="{{administrador[2]}}" required type="text" class="input" placeholder="apellido" name="apellido" id="apellido"><br>
+                <br></div>
+                <div class="Telefono">
+                <label for="telefono">Telefono</label>
+                <input  value="{{administrador[3]}}"required type="text" class="input" placeholder="telefono" name="telefono" id="telefono"><br>
+                <br></div>
+                <div class="correo">
+                <label for="correo">Correo</label>
+                <input value="{{administrador[4]}}"required type="text" class="input" placeholder="correo" name="correo" id="correo"><br>
+                <br></div>
+                <div class="contraseña">
+                <label for="contrasena">Contraseña</label>
+                <input value="{{administrador[5]}}"required type="password" pattern=".{6,}" class="input" placeholder="contrasena" name="contrasena" id="contrasena"><br>
+                <br></div>
+                <div class="button10">
+                    <button type="submit" >Guardar</button>
+                    <button><a href="{{url_for('administradores')}}" style="text-decoration: none;" > Volver</a></button>
+                </div>
+                <br>
+            </form>
+            
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "maestra.html" %}
+{% block titulo %}
+Editar corte
+{% endblock %}
+{% block contenido %}
+<section class="section">
+    <div class="coluna">
+        <div class="columna1">
+            <h3 class="titulo">🪒 Editar corte</h3>
+            <form action="{{url_for('actualizar_corte')}}" method="POST">
+                
+                <input type="hidden" name="codigocorte" value="{{corte[0]}}">
+                <div class="Ncorte">
+                <label for="nombrecorte">Nombre del corte</label>
+                <input value="{{corte[1]}}" required type="text" class="input" placeholder="Nombre del corte" name="nombrecorte" id="nombrecorte"><br>
+                <br></div>
+                <div class="Tsombra">
+                <label for="tiposombra">Tipo de sombra</label>
+                <input value="{{corte[2]}}" required type="text" class="input" placeholder="tipo de sombra" name="tiposombra" id="tiposombra"><br>
+                <br></div>
+                <div class="free">
+                <label for="freestyles">Freestyles</label>
+                <input  value="{{corte[3]}}"required type="text" class="input" placeholder="si/no" name="freestyles" id="freestyles"><br>
+                <br></div>
+                <div class="cejas">
+                <label for="cejas">Cejas</label>
+                <input value="{{corte[4]}}"required type="text" class="input" placeholder="si/no" name="cejas" id="cejas"><br>
+                <br></div>
+                <div class="barba">
+                <label for="barba">Barba</label>
+                <input value="{{corte[5]}}"required type="text" class="input" placeholder="si/no" name="barba" id="barba"><br>
+                <br></div>
+                <div class="marcado">
+                <label for="marcado">Marcado</label>
+                <input value="{{corte[6]}}"required type="text" class="input" placeholder="si/no" name="marcado" id="marcado"><br>
+                <br></div>
+                <div class="patilla">
+                <label for="patilla">Patilla</label>
+                <input value="{{corte[7]}}"required type="text" class="input" placeholder="si/no" name="patilla" id="patilla"><br>
+                <br></div>
+                <div class="patilla">
+                    <label for="diacita">día</label>
+                    <input value="{{corte[8]}}"required type="date" class="input" name="diacita" id="diacita"><br>
+                    <br></div>
+                <div class="patilla">
+                    <label for="horacita">Hora</label>
+                    <input value="{{corte[9]}}"required type="time" class="input" name="horacita" id="horacita"><br>
+                    <br></div>
+                    
+                <div class="button10">
+                    <button type="submit" >Guardar</button>
+                    
+                    <a href="{{url_for('cortes')}}">
+                        <button  class="boton"> Volver </button>
+                        
+                    </a>
+                </div>
+                <br>
+            </form>
+            
+        </div>
+
+    </div>
+    
+</section>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "maestra.html" %}
+{% block titulo %}
+Agregar barbero
+{% endblock %}
+{% block contenido %}
+
+
+<section class="section">
+    <div class="columna">
+        <div class="columna2">
+            <h3 class="titulo1">Agregar Barbero</h3>
+            <br>
+            <form action="{{url_for('guardar_barbero')}}" method="POST">
+                <label for="nombre">Nombre</label>
+                <input required type="text" class="input" placeholder="Nombre" name="nombre" id="nombre">
+<br>
+<br>
+                <label for="apellido">Apellido</label>
+                <input required type="text" class="input" placeholder="Apellido" name="apellido" id="apellido">
+<br>
+<br>
+                <div class="descripcion_b">
+                    <label for="descripcion">Descripcion</label>
+                    <input required type="text" class="input" placeholder="Descripcions" name="descripcion" id="descripcion">
+                </div>
+<br>
+<br>
+                <button type="submit"  class="button"  >Guardar</button>
+                <a href="{{url_for('barberos')}}">
+                    <button>Volver</button>
+                </a>
+<br>
+<br>    
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

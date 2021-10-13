@@ -1,0 +1,55 @@
+{% extends "maestra.html" %}
+{% block titulo %} Administrador {% endblock %}
+{% block contenido %}
+
+
+<div class="titAdministradores">
+  <h3 class="titulo">Administradores</h3>
+</div>
+<br>
+
+<div class="btnAggADMI">
+  <button><a href="{{url_for('formulario_agregar_administrador')}} " class="button" style="text-decoration: none;">Agregar</a></button>
+</div>
+
+<div class="container">          
+    <table class="table">
+      <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Telefono</th>
+            <th>Correo</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for administrador in administradores %}
+        <tr>
+            <td>{{administrador[1]}}</td>
+            <td>{{administrador[2]}}</td>
+            <td>{{administrador[3]}}</td>
+            <td>{{administrador[4]}}</td>
+    
+            <td>
+                <button ><a class="button" href="{{url_for('editar_administrador', codigoadministrador=administrador[0])}}" style="text-decoration: none;"> Editar</a></button>
+            </td>
+
+            <td>
+                <form action="{{('eliminar_administrador')}}" method="POST">
+                    <input type="hidden" name="codigoadministrador" value="{{administrador[0]}}">
+                    <button class="botons">Eliminar</button>
+                </form>
+            </td>
+
+            
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  
+  </body>
+  </html>
+{% endblock %}

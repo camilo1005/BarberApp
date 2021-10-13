@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../static/images/logo2.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <title>Maestra || {% block titulo %}{% endblock %}</title>
+</head>
+<body>
+    <main class="header">
+        <header>
+            
+            <a href="{{url_for('home')}}">
+                <img class="imgh" src="../static/images/logo2.jpeg" title="LOGO BARBERAPP" >
+            </a>
+            <div class="btn_des" title="Boton desarrolladores">
+                <a href="{{url_for('desarrolladores')}}">
+                    <img src="../static/images/web.png" >
+                </a>
+                <p class="titulo_desarrolladores">DESARROLLADORES</p>
+            </div>
+
+            <div class="registro">
+                <a href="{{url_for('clientes')}}">
+                    <img src="../static/images/registro.png" title="BOTON DE REGISTRARSE" >
+                </a>
+                <p class="titulo_registro">REGISTRARSE</p>
+            </div>
+            <div class="admin">
+                <a href="{{url_for('administradores')}}">
+                    <img src="../static/images/administrador.png" title="BOTON DE ADMINISTRADOR">
+                </a>
+                <p class="titulo_administrador">ADMINISTRADOR</p>
+            </div>
+            <div class="citas">
+                <a  href="{{url_for('cortes')}}">
+                    <img src="../static/images/barbero.png" title="BOTON DE CITAS">
+                </a>
+                <p class="titulo_citas">CITAS</p>
+            </div>
+            <div class="barber">
+                <a href="{{url_for('barberos')}}">
+                     <img src="../static/images/citas.png" title="BOTON DE BARBERO">
+                </a>
+                <p class="titulo_baber">BARBERO</p>
+            </div>
+
+            
+
+        </header>
+        
+    </main>
+
+    
+    <div class="caja">
+        
+        {%block contenido %} {% endblock %}
+
+    </div>
+
+    <footer >
+        
+    </footer>
+
+    
+</body>
+</html>

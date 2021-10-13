@@ -1,0 +1,521 @@
+header{
+    font-family: "Grechen Fuemen", cursive;
+  }
+
+body{
+    font-family: "Open Sans", sans-serif;
+    background-image: url(../static/images/fondobc.jpg) ;
+    
+}
+
+
+
+th{
+    margin: -6% 0% 0% -6%;
+    background: rgba(0, 0, 0, 0.445);
+}
+
+.header{
+    background: linear-gradient(to top left,blue 17%,white,red 76%);
+    margin: -2% -1% 0% -1%;
+    padding: 7%;
+    border: black solid 2px;
+    cursor: pointer;
+}
+
+.imgh{
+    float: left;
+    width: 25%;
+    margin: -6% 0% 0% -6%;
+    border: white solid 6px;
+    border-radius: 60px;
+}
+
+
+main div :hover{
+    background: rgb(255, 219, 100);
+    color: rgb(0, 0, 0);
+    border: black solid 1px;
+    border-radius: 15px;
+    
+}
+
+main div :active{
+    background: linear-gradient(to top left,blue 17%,white,red 76%);
+    color: rgb(0, 0, 0);
+    border: black solid 1px;
+    border-radius: 15px;
+    
+}
+
+
+.caja{
+    border: black solid 1px;
+    margin: 60px 40px -80px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+footer{
+    background: linear-gradient(to top left,rgba(255, 0, 0, 0.700) 30%,white,rgba(0, 0, 255, 0.623) 90%);
+    margin: 10% -1% -26% -2%;
+    padding: 7%;
+    border: black solid 2px; 
+    position: fixed;
+    right: 0;
+    left: 0;
+    
+}
+
+.info{
+    border: black solid 1px;
+    background-color: rgba(255, 255, 255, 0.911);
+    border-radius: 10px;
+    text-align: center;
+}
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: #212529;
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: #212529;
+    --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-table-hover-color: #212529;
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    vertical-align: top;
+    border-color: black;
+}
+
+/*botones */
+
+.registro img{
+    color: rgb(255, 219, 100);
+    height: 100px;
+    float: right;
+    margin: -40px 30px 0 0;
+}
+
+.citas img{
+    color: rgb(255, 219, 100) ;
+    height: 100px;
+    float: right;
+    margin: -40px 30px 0 0;
+}
+
+.admin img{
+    color: rgb(255, 219, 100) ;
+    height: 100px;
+    float: right;
+    margin: -40px 40px 0 0;
+}
+
+.barber img{
+    color: rgb(255, 219, 100) ;
+    height: 100px;
+    float: right;
+    margin: -40px 30px 0 0;
+}
+
+.home img{
+    color: rgb(255, 219, 100) ;
+    height: 40px;
+    float: right;
+    margin: -60px -65px -5px 0px;
+}
+
+input{
+    background-color: rgb(255, 219, 100);
+    width: 15%;
+    height: 20px;
+    border-radius: 6px;
+}
+
+.aggCorte{
+    margin: 0 0 20px 0;
+}
+
+
+.titCortes{
+    float: left;
+    font-size: 30px;
+    margin: 0 -110px 0 30px;
+}
+
+.titBarbero{
+    float: left;
+    font-size: 30px;
+    margin: 0 -110px 0 30px;
+}
+
+.titClientes{
+    float: left;
+    font-size: 30px;
+    margin: 0 -110px 0 30px;
+}
+
+.titAdministradores{
+    float: left;
+    font-size: 30px;
+    margin: 0 -110px 0 30px; 
+}
+
+.titulo1{
+    
+    font-size: 30px;
+    margin: 15px -20px 0 30px;  
+}
+
+.btnAgg{
+    margin: 62px 0 0 0;
+    float: left;
+    font-size: 20px;
+
+}
+
+.btnAggADMI{
+    margin: 62px 0 0 -155px;
+    float: left;
+    font-size: 20px;
+}
+
+.btnAggcliente{
+    margin: 81px 0 0 0;
+    float: left;
+    font-size: 20px;
+}
+
+button{
+    border-radius: 8px;
+    height: 25px;
+    width: 65px;
+    background: black;
+    color: rgb(255, 219, 100);
+}
+
+button:hover{
+    border-radius: 8px;
+    height: 25px;
+    width: 65px;
+    background: rgb(255, 219, 100);
+    color: black;
+}
+
+button:active{
+    border-radius: 8px;
+    height: 25px;
+    width: 65px;
+    background: linear-gradient(to top left,rgba(255, 0, 0, 0.700) 30%,white,rgba(0, 0, 255, 0.623) 90%);
+    color: black;
+}
+
+a{
+    color: rgb(255, 219, 100);
+}
+
+a:hover{
+    color: black;
+}
+
+.titRgistro {
+    color: black;
+    float: right;
+}
+
+.titulo_registro{
+    font-family:"Grechen Fuemen";
+    font-weight: bold;
+    margin: 59px -113px 0 0;
+    float: right;
+    font-size: 15px;
+}
+
+.titulo_registro:hover{
+    font-family:"Grechen Fuemen";
+    font-weight: 900;
+    margin: 59px -113px 0 0;
+    float: right;
+    font-size: 15px;
+    background: none;
+    border-radius: none;
+    border: none;
+}
+
+.titulo_administrador{
+    font-family:"Grechen Fuemen";
+    font-weight: bold;
+    margin: 59px -113px 0 0;
+    float: right;
+    font-size: 15px;
+}
+
+.titulo_administrador:hover{
+    font-family:"Grechen Fuemen";
+    font-weight: 900;
+    margin: 59px -113px 0 0;
+    float: right;
+    font-size: 15px;
+    background: none;
+    border-radius: none;
+    border: none;
+}
+
+.titulo_citas{
+    font-family:"Grechen Fuemen";
+    font-weight: bold;
+    margin: 59px -87px 0 0;
+    float: right;
+    font-size: 15px;
+}
+
+.titulo_citas:hover{
+    font-family:"Grechen Fuemen";
+    font-weight: 900;
+    margin: 59px -87px 0 0;
+    float: right;
+    font-size: 15px;
+    background: none;
+    border-radius: none;
+    border: none;
+}
+
+.titulo_baber{
+    font-family:"Grechen Fuemen";
+    font-weight: bold;
+    margin: 59px -80px 0 0;
+    float: right;
+    font-size: 15px;
+}
+
+.titulo_baber:hover{
+    font-family:"Grechen Fuemen";
+    font-weight: 900;
+    margin: 59px -80px 0 0;
+    float: right;
+    font-size: 15px;
+    background: none;
+    border-radius: none;
+    border: none;
+}
+
+.titulo_desarrolladores{
+    font-family:"Grechen Fuemen";
+    font-weight: bold;
+    margin: 59px -130px 0 0;
+    float: right;
+    font-size: 15px;
+}
+
+.titulo_desarrolladores:hover{
+    font-family:"Grechen Fuemen";
+    font-weight: 900;
+    margin: 59px -130px 0 0;
+    float: right;
+    font-size: 15px;
+    background: none;
+    border-radius: none;
+    border: none;
+}
+
+.columna1{
+    margin: 0 0 25px 0;
+
+}
+
+/*editar corte*/
+
+.button10{
+    margin: 0 -100px 0 0;
+}
+
+.Ncorte{
+    margin: 0 20px 0 0;
+}
+
+.Tsombra{
+    margin: 0 5px 0 0;
+}
+
+.free{
+    margin: 0 -39px 0 0;
+}
+
+.cejas{
+    margin: 0 -71px 0 0;
+}
+
+.barba{
+    margin: 0 -65px 0 0;
+}
+
+.marcado{
+    margin:0 -44px 0 0;
+}
+
+.patilla{
+    margin: 0 -65px 0 0;
+}
+
+/*agregar admin*/
+
+.apellido{
+    margin: 0 -2.5px 0 0;
+}
+
+.telefono{
+    margin: 0 4px 0 0;
+}
+
+.correo{
+    margin: 0 -11px 0 0;
+}
+
+.contrasena{
+    margin: 0 26px 0 0;
+}
+
+/*agregar corte*/
+
+.Ncorte1{
+    margin: 0 20px 0 0;
+}
+
+.Tsombra1{
+    margin: 0 -15px 0 0;
+}
+
+.free1{
+    margin: 0 -37px 0 0;
+}
+
+.cejas1{
+    margin: 0 -75px 0 0;
+}
+
+.barba1{
+    margin: 0 -68px 0 0;
+}
+
+.marcado1{
+    margin:0 -42px 0 0;
+}
+
+.patilla1{
+    margin: 0 -67px 0 0;
+}
+
+/*agregar cliente*/
+
+.apellidoC{
+    margin: 0 5px 0 0;
+}
+
+.fechanacimientoC{
+    margin: 0 0 0 -91px;
+}
+
+.cedulaC{
+    margin: 0 13px 0 0;
+}
+
+.telefonoC{
+    margin: 0 0 0 0;
+}
+
+/*agregar barbero*/
+.descripcion_b{
+    margin: 0 0 0 -23px;
+}
+
+/* estilos home ⬇*/
+
+.publicidad{
+    margin: 20px 145px 0 -595px;
+    width: 450px;
+}
+
+.button-home{
+    border-radius: 8px;
+    height: 100px;
+    width: 249px;
+    background: black;
+    color: rgb(255, 219, 100);
+    float: right;
+    margin: 80px 211px 0px -460px;
+    font-size: 190%;
+}
+
+.button-home:hover{
+    border-radius: 8px;
+    height: 100px;
+    width: 249px;
+    background: rgb(255, 219, 100);
+    color: black;
+    float: right;
+    margin: 28px 234px 0px -378px;
+    margin: 80px 211px 0px -460px;
+    font-size: 190%;
+}
+
+.button-home:active{
+    border-radius: 8px;
+    height: 100;
+    width: 249px;
+    background: linear-gradient(to top left,rgba(255, 0, 0, 0.700) 30%,white,rgba(0, 0, 255, 0.623) 90%);
+    color: black;
+    float: right;
+    margin: 80px 211px 0px -460px;
+    font-size: 190%;
+}
+
+.informacion{
+    border: black solid 1px;
+    background-color: rgba(255, 255, 255, 0.911);
+    border-radius: 10px;
+    text-align: center;
+    margin: 25px 25px 25px 25px;
+}
+
+.titulo_info{
+    font-size: 260%;
+    font-family: 'Ephesis', cursive;
+}
+
+.parrafo_info{
+    font-size: 220%;
+    margin-top: -35px;
+    font-family: 'Ephesis', cursive;
+}
+
+/*boton desarrollador*/
+
+.btn_des img{
+    color: rgb(255, 219, 100) ;
+    height: 100px;
+    float: right;
+    margin: -31px 30px 0 0;
+}
+
+
+/*imagenes desarrolladores*/
+
+.img_camilo{
+    height: 300px;
+}
+
+.img_andres{
+    height: 300px; 
+}
+
+.img_jeff{
+    height: 300px;
+}
+
+.img_brayan{
+    height: 300px;
+}
+

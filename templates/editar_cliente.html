@@ -1,0 +1,44 @@
+{% extends "maestra.html" %}
+{% block titulo %}
+Editar cliente
+{% endblock %}
+{% block contenido %}
+<section class="section">
+    <div class="coluna">
+        <div class="columna1">
+            <h3 class="titulo">Editar Cliente</h3>
+            <form action="{{url_for('actualizar_cliente')}}" method="POST">
+
+                <input type="hidden" name="codigocliente" value="{{cliente[0]}}">
+                <label class="nombreC" for="nombre">Nombre:</label>
+                <input value="{{cliente[1]}}" required type="text" class="input" placeholder="Nombre" name="nombre" id="nombre">
+<br>
+<br>
+                <label class="apellidoC" for="apellido">Apellido</label>
+                <input value="{{cliente[2]}}" required type="text" class="input" placeholder="Apellido" name="apellido" id="apellido">
+                <br>
+                <br>
+                <label class="fechanacimientoC" for="fechanacimiento">Fecha de Nacimineto</label>
+                <input  value="{{cliente[3]}}"required type="date" class="input" placeholder="Fecha de nacimiento" name="fechanacimiento" id="fechanacimiento">
+                <br>
+                <br>
+                <label class="telefonoC" for="telefono">Telefono</label>
+                <input value="{{cliente[4]}}"required type="number" class="input" placeholder="Telefono" name="telefono" id="telefono">
+                <br>
+                <br>
+                <label class="cedulaC" for="cedula">Cedula</label>
+                <input value="{{cliente[5]}}"required type="text" class="input" placeholder="Cedula" name="cedula" id="cedula">
+                <br>
+                <br>
+                <button type="submit" class="button">Guardar</button>
+                <a href="{{url_for('clientes')}}">
+                    <button class="button is-primary mt-2">Volver</button>
+                </a>
+
+            </form>
+            
+        </div>
+
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends "maestra.html" %}
+{% block titulo %} Cortes {% endblock %}
+{% block contenido %}
+
+<div class="titCortes">
+  <h3 >✂Cortes</h3>
+</div>
+<br>
+
+<div class="btnAgg">
+  <a href="{{url_for('formulario_agregar_corte')}} ">
+    <button  class="button" style="text-decoration: none;"> Agregar</button>
+  </a>
+</div>
+
+<div class="container">          
+    <table class="table">
+      <thead>
+        <tr>
+            <th>Nombre del corte</th>
+            <th>Tipo de sombra</th>
+            <th>Freestyles</th>
+            <th>Cejas</th>
+            <th>Barba</th>
+            <th>Marcado</th>
+            <th>Patillas</th>
+            <th>Día</th>
+            <th>Hora</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+            
+        </tr>
+      </thead>
+      <tbody>
+        {% for corte in cortes %}
+        <tr>
+            <td>{{corte[1]}}</td>
+            <td>{{corte[2]}}</td>
+            <td>{{corte[3]}}</td>
+            <td>{{corte[4]}}</td>
+            <td>{{corte[5]}}</td>
+            <td>{{corte[6]}}</td>
+            <td>{{corte[7]}}</td>
+            <td>{{corte[8]}}</td>
+            <td>{{corte[9]}}</td>
+
+            
+            <td>
+                <button ><a class="button" href="{{url_for('editar_corte', codigocorte=corte[0])}}" style="text-decoration: none;"> Editar</a></button>
+            </td>
+
+            <td>
+                <form action="{{('eliminar_corte')}}" method="POST">
+                    <input type="hidden" name="codigocorte" value="{{corte[0]}}">
+                    <button class="botons">Eliminar</button>
+                </form>
+            </td>
+
+            
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  
+  </body>
+  </html>
+  
+{% endblock %}

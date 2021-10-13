@@ -1,0 +1,40 @@
+create schema BarberApp;
+use BarberApp;
+
+create table cortes
+(codigocorte int  primary key  not null auto_increment,
+nombrecorte char(20) not null,
+tiposombra varchar(15) not null,
+freestyles char(2) not null,
+cejas char (2) not null,
+barba char(2) not null,
+marcado char(2) not null,
+patilla char(2) not null,
+diacita date not null,
+horacita time  not null
+);
+
+create table barbero
+ (codigobarbero int primary  key not null auto_increment ,
+ nombre char(20) not null,
+ apellido char(20) not null,
+ descripcion varchar(255)not null
+ );
+ 
+  create table cliente
+ (codigocliente int (7) primary key not null auto_increment,
+ cedula int(12) not null,
+ nombre varchar(20) not null,
+ apellido varchar(20) not null,
+ fechanacimiento date not null,
+ telefono char (10) not null
+ );
+
+ create table administradores
+( codigoadministrador int primary key not null auto_increment,
+nombre char(20)  not null,
+apellido char(20) not null,
+telefono char(10) not null,
+correo varchar (30) not null ,
+contrasena varchar(20)  not null
+);

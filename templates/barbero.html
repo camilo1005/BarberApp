@@ -1,0 +1,50 @@
+{% extends "maestra.html" %}
+{% block titulo %} Barberos {% endblock %}
+{% block contenido %}
+
+<section class="section">
+    <div class="columna">
+        <div class="columna1">
+            <h3 class="titBarbero"> 🪒 Barberos</h3>
+            <div class="btnAgg">
+                <a href="{{url_for('formulario_agregar_barbero')}} " >
+                    <button class="button" style="text-decoration: none;">Agregar</button>
+                </a>
+                </div>
+            <table class="table">
+                <thead class="thead">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Descripcion</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for barbero in barberos %} 
+                    <tr>
+                        <td>{{barbero[1]}}</td>
+                        <td>{{barbero[2]}}</td>
+                        <td>{{barbero[3]}}</td>
+                        <td>
+                            <a href="{{url_for('editar_barbero', codigobarbero=barbero[0])}}">
+                                <button class="boton">Editar</button>
+                            </a>
+                        </td>
+                        <td>
+                            <form action="{{('eliminar_barbero')}}" method="POST">
+                                <input type="hidden" name="codigobarbero" value="{{barbero[0]}}">
+                                <button class="boton">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

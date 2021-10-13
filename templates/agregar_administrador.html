@@ -1,0 +1,46 @@
+{% extends "maestra.html" %}
+{% block titulo %}
+Agregar Administrador
+{% endblock %}
+{% block contenido %}
+
+<section class="section">
+    <div class="columna">
+        <div class="columna2">
+            <h3 class="titulo1"> Agregar Administrador</h3>
+            <br>
+            <br>
+            <form action="{{url_for('guardar_administrador')}}" method="POST">
+                <div class="aggadmi">
+                    
+                    <div class="Nadmi1"></div>
+                    <label for="nombre">Nombre</label>
+                    <input required type="text" class="input" placeholder="Nombre" name="nombre" id="nombre"><br>
+                    <br></div>
+                    <div class="apellido">
+                    <label for="apellido">apellido</label>
+                    <input required type="text" class="input" placeholder="Apellido" name="apellido" id="apellido"><br>
+                    <br></div>
+                    <div class="telefono">
+                    <label for="telefono">Telefono</label>
+                    <input required type="number" class="input" placeholder="Telefono" name="telefono" id="telefono"><br>
+                    <br></div>
+                    <div class="correo">
+                    <label for="correo">Correo</label>
+                    <input required type="text" class="input" placeholder="Correo" name="correo" id="correo"><br>
+                    <br></div>
+                    <div class="contrasena">
+                    <label for="contrasena">Contraseña</label>
+                    <input required type="password" pattern=".{6,}" class="input" placeholder="Minimo 6 caracteres" name="contrasena" id="contrasena"><br>
+                    <br></div>
+                    <button type="submit"  class="button"  >Guardar</button>
+                    <button><a href="{{url_for('administradores')}}" class="button" style="text-decoration: none;">Volver</a></button>
+                </div>    
+            </form>
+            
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}
